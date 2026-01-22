@@ -13,6 +13,7 @@ hide:
 * Установить MkDocs
 * Настроить Git
 * Задеплоить на GitHub Pages
+* Проверить пайплайн, добавив эту строку
 
 <div class="bg-blue-100 p-4 rounded-lg mt-4 border border-blue-300">
   <p class="text-blue-800 font-bold">
