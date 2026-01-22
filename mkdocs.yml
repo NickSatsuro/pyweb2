@@ -1,5 +1,5 @@
 site_name: My Awesome Site
-site_url: https://YOUR_USER.github.io/YOUR_REPO/
+site_url: https://NickSatsuro.github.io/pyweb2/
 
 theme:
   name: material
@@ -13,4 +13,3 @@ extra_javascript:
 
 nav:
   - Главная: index.md
-  
