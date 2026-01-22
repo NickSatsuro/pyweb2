@@ -1,17 +1,32 @@
-# Welcome to MkDocs
+---
+hide:
+  -navigation
+  -toc
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Привет! Это мой первый сайт
 
-## Commands
+Это обычный текст. Я могу писать **жирным** или *курсивом*.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Мои задачи
 
-## Project layout
+* Установить MkDocs
+* Настроить Git
+* Задеплоить на GitHub Pages
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<div class="bg-blue-100 p-4 rounded-lg mt-4 border border-blue-300">
+  <p class="text-blue-800 font-bold">
+    Это блок, стилизованный через Tailwind CSS!
+  </p>
+</div>
+
+<style>
+    /* Скрываем вкладки под синей шапкой */
+    .md-tabs { display: none; }
+    
+    /* Скрываем путь "Главная" над заголовком */
+    .md-content__inner > header { display: none; }
+    
+    /* Скрываем меню справа */
+    .md-sidebar--secondary { display: none; }
+</style>

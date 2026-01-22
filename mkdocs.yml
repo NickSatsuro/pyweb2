@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: My Awesome Site
+site_url: https://YOUR_USER.github.io/YOUR_REPO/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+
+# Подключаем Tailwind через CDN (быстрый способ для Task 1)
+extra_javascript:
+  - https://cdn.tailwindcss.com
+
+nav:
+  - Главная: index.md
+  
