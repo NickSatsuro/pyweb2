@@ -36,22 +36,22 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-        - name: Install Node dependencies
-          run: npm ci
+      - name: Install Node dependencies
+        run: npm ci
 
-        - name: Build Tailwind CSS
-          run: npm run build:css
+      - name: Build Tailwind CSS
+        run: npm run build:css
 
-        - name: Build Mkdocs
-          run: mcdocs build
+      - name: Build Mkdocs
+        run: mkdocs build
 
-        - name: Minify
-          run: npm run minify
+      - name: Minify
+        run: npm run minify
 
-        - name: Validate
+      - name: Validate
           run: npm run validate
 
-        - name: Upload Artifact
+      - name: Upload Artifact
           uses: actions/upload-pages-artifact@v3
           with:
             path: 'site' 
