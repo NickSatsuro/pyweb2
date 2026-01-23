@@ -6,6 +6,9 @@
       "no-trailing-whitespace": "off",
       "attr-quotes": "off",
       "void-style": "off",
-      "no-inline-style": "off"
+      "no-inline-style": "off",
+      "heading-level": "off",
+      "no-missing-references": "off",
+      "element-required-content": "off"
     }
   }
