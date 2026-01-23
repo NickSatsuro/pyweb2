@@ -30,13 +30,39 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Build
-        run: mkdocs build
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Set up Node JS
+        uses: actions/setup-node@v4
         with:
-          path: 'site'
+          node-version: '20'
+          cache: 'npm'
 
+        - name: Install Node dependencies
+          run: npm ci
+
+        - name: Build Tailwind CSS
+          run: npm run build:css
+
+        - name: Build Mkdocs
+          run: mcdocs build
+
+        - name: Minify
+          run: npm run minify
+
+        - name: Validate
+          run: npm run validate
+
+        - name: Upload Artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: 'site' 
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to Github Pages
+        id: deployment
         uses: actions/deploy-pages@v4

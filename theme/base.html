@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ config.site_name }}</title>
+    <meta name="description" content="{{ config.site_description }}">
+    <meta name="author" content="{{ config.site_author }}">
+
+    <link href="{{ base_url }}/assets/css/style.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans text-gray-800">
+
+    <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="{{ base_url }}/" class="text-xl font-bold tracking-wider hover:text-blue-400 transition-colors">
+                {{ config.site_name }}
+            </a>
+
+            <nav>
+                <ul class="flex space-x-6 text-sm font-medium">
+                    {% for nav_item in nav %}
+                    <li>
+                        <a href="{{ nav_item.url | url }}" 
+                           class="hover:text-blue-400 transition-colors {% if nav_item.active %}text-blue-400{% endif %}">
+                            {{ nav_item.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <article class="prose prose-slate max-w-none bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+            
+            {% if page.title %}
+            <h1 class="mb-6 pb-4 border-b border-gray-100">{{ page.title }}</h1>
+            {% endif %}
+
+            {{ page.content }}
+            
+        </article>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-400 py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="font-medium text-white">{{ config.site_name }}</p>
+                    <p class="text-sm mt-1 opacity-75">Создано автором: {{ config.site_author }}</p>
+                </div>
+                <div class="text-sm">
+                    &copy; 2026 .
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,15 +1,17 @@
-site_name: My Awesome Site
+site_name: Nick Satsuro's Site
 site_url: https://NickSatsuro.github.io/pyweb2/
+site_description: "Это учебный проект с автоматическим деплоем и кастомной темой."
+site_author: "Николай Сацуро"
 
 theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
+  name: null
+  custom_dir: theme
 
-# Подключаем Tailwind через CDN (быстрый способ для Task 1)
-extra_javascript:
-  - https://cdn.tailwindcss.com
+extra_css:
+  - assets/css/style.css
 
 nav:
   - Главная: index.md
+
+plugins:
+  - search

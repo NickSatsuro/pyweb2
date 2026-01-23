@@ -1,0 +1,27 @@
+{
+  "name": "pyweb2task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "postcss src/input.css -o docs/assets/css/style.css",
+    "validate": "html-validate \"site/**/*.html\"", 
+    "minify":"html-minifier-terser --input-dir site --output-dir site --collapse-whitespace --remove-comments --minify-css --minify-js --file-ext html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.23",
+    "cssnano": "^7.1.2",
+    "html-minifier-terser": "^7.2.0",
+    "html-validate": "^10.0.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.17"
+  }
+}
