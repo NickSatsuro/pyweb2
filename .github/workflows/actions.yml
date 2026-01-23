@@ -49,7 +49,7 @@ jobs:
         run: npm run minify
 
       - name: Validate
-          run: npm run validate
+        run: npm run validate
 
       - name: Upload Artifact
           uses: actions/upload-pages-artifact@v3
