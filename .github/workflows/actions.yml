@@ -52,9 +52,9 @@ jobs:
         run: npm run validate
 
       - name: Upload Artifact
-          uses: actions/upload-pages-artifact@v3
-          with:
-            path: 'site' 
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'site' 
 
   deploy:
     needs: build
